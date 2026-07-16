@@ -1,0 +1,14 @@
+{
+  "no-restricted-imports": [
+    "error",
+    {
+      "paths": [
+        {
+          "name": "react",
+          "importNames": ["useMemo", "useCallback", "memo"],
+          "message": "React Compiler memoizes automatically. Remove the import. If you have a demonstrated bailout, opt out with `// oxlint-disable-next-line no-restricted-imports -- <reason>`."
+        }
+      ]
+    }
+  ]
+}
