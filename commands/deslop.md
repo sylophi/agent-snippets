@@ -1,14 +1,17 @@
 ---
-description: Ban em dashes and middle dots from produced artifacts, and scrub the ones already written
+description: Write like a normal human would.
 ---
 
-For the remainder of this session, keep these characters out of the artifacts
-you produce:
+The characters below are the usual offenders, either because they are not on
+a normal keyboard or because nobody reaches for them when typing casually.
+For the remainder of this session, keep them out of the artifacts you
+produce:
 
 - em dash `—`
 - en dash `–`
 - middle dot / interpunct `·`
 - bullet `•` used inline in a sentence
+- semicolon `;` used in prose
 
 **Scope: artifacts only.** This covers anything that outlives the
 conversation. Code and code comments, UI copy and other user-facing strings,
@@ -22,7 +25,13 @@ included. The rule is about what gets committed, not about how you talk.
 Do not simply swap in a hyphen or ellipsis. Rewrite the sentence so it does
 not need the character in the first place. Use a period and a new sentence, a
 colon, a comma, or parentheses, whichever the sentence actually calls for. A
-sentence that leans on an em dash is usually two sentences.
+sentence that leans on an em dash or a semicolon is usually two sentences.
+
+The semicolon ban is a prose rule, not a syntax rule. Semicolons that are
+part of a programming language's grammar, a CSS declaration, an HTML entity
+like `&amp;`, or any other machine-read syntax are untouchable. The ban
+applies only where a semicolon joins two clauses of human-readable text:
+comments, docs, commit messages, UI copy, PR bodies.
 
 Then clean up the artifacts already written in this session:
 
