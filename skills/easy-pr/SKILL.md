@@ -1,5 +1,6 @@
 ---
-description: Commit, push, and open a PR with just a Description section
+name: easy-pr
+description: Commit, push, and open a PR whose body is just a brief Description section. Use when asked to open a quick or easy PR without a test plan or other boilerplate sections.
 ---
 
 Create a pull request for the current branch. Follow these steps exactly:
