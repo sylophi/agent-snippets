@@ -14,7 +14,6 @@ npx skills add https://github.com/sylophi/agent-snippets
 ```
 
 Note: finalize invokes deslop and easy-pr, so install all three together.
-stitch-images needs ImageMagick on the machine the agent runs on.
 
 ## Slash commands
 
