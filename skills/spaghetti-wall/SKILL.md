@@ -1,6 +1,7 @@
 ---
 name: spaghetti-wall
 description: Used when the user asks to try out experiments.
+disable-model-invocation: true
 ---
 
 Make worktrees with `/sm-new-worktree`, then send a subagent down each trying out/experimenting with new features or changes that you think might be helpful for the project.

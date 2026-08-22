@@ -1,6 +1,7 @@
 ---
 name: deslop
 description: Write like a normal human would. Keeps em dashes and other telltale punctuation out of committed artifacts and cleans up what this session already wrote. Use when asked to deslop the branch or strip AI-sounding punctuation from code, docs, commits, or PRs.
+disable-model-invocation: true
 ---
 
 The characters below are the usual offenders, either because they are not on
