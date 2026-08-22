@@ -1,5 +1,7 @@
 ---
+name: react-compiler-lint
 description: Set up React Compiler lint enforcement — ban manual memoization imports (useMemo, useCallback, memo) and optionally run compiler diagnostics via oxlint jsPlugins. Use when setting up a new React project, adding oxlint/ESLint config, or when asked to "ban memoization imports" / "add the react compiler lint rule".
+disable-model-invocation: true
 ---
 
 # React Compiler lint setup
@@ -22,7 +24,7 @@ is noise and can defeat compiler output. Enforced with the core
 `no-restricted-imports` rule — no plugin or dependency needed.
 
 Merge the rule from
-<https://raw.githubusercontent.com/sylophi/agent-snippets/main/commands/react-compiler-lint/rule.json>
+<https://raw.githubusercontent.com/sylophi/agent-snippets/main/skills/react-compiler-lint/rule.json>
 into the `rules` object of `.oxlintrc.json`. If a `no-restricted-imports` entry already exists, append
 to its `paths` array instead of replacing it:
 
@@ -79,7 +81,7 @@ and other patterns that make the compiler bail out.
 ```
 
 3. Merge the `rules` from
-   <https://raw.githubusercontent.com/sylophi/agent-snippets/main/commands/react-compiler-lint/diagnostics.json>
+   <https://raw.githubusercontent.com/sylophi/agent-snippets/main/skills/react-compiler-lint/diagnostics.json>
    into the config's `rules` object. They mirror the compiler-diagnostic subset of
    the plugin's `recommended-latest` preset. `rules-of-hooks` and
    `exhaustive-deps` are deliberately excluded — use oxlint's native
