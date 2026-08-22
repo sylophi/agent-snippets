@@ -1,7 +1,9 @@
 ---
 name: fast-deslop
-description: Write like a normal human would. Keeps em dashes and other telltale punctuation out of committed artifacts and cleans up what this session already wrote. Use when asked to run fast-deslop on the branch or strip AI-sounding punctuation from code, docs, commits, or PRs.
+description: Use when asked to quickly strip AI-sounding punctuation from code, docs, commits, or PRs.
 ---
+
+Write like a normal human would. Keep em dashes and other telltale punctuation out of committed artifacts and clean up what this session already wrote. 
 
 The characters below are the usual offenders, either because they are not on
 a normal keyboard or because nobody reaches for them when typing casually.
