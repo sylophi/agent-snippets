@@ -10,4 +10,4 @@ installer lets you pick which ones to include:
 npx skills add https://github.com/sylophi/agent-snippets
 ```
 
-Note: finalize invokes deslop and easy-pr, so install all three together.
+Note: finalize invokes fast-deslop and easy-pr, so install all three together.
