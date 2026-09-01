@@ -62,3 +62,21 @@ Adding a project through the app (direct path entry, the native folder picker, o
 
 Adding a project through the app now selects that project's primary checkout instead of staying on the current view. Bulk scan adds land on the first added project, and a bare repo falls back to the new-worktree page.
 ```
+
+=== Bad ===
+```markdown
+## Description
+
+`sm land` fast-forwarded the primary checkout to the repo default branch after every merge, with no idea what the PR actually merged into. Landing a PR based on a long-lived branch pulled unrelated commits into main and then reported `primary checkout caught up (origin/main)`, plus `primaryCaughtUp: true` in the JSON, even though the primary branch did not have the landed work.
+
+`prSummary` now carries `baseRefName`, and the catch-up is skipped with a reason when the base is not the primary branch, so land reports `skipped primary catch-up: PR merged into v2, not the primary branch main`. An unreadable base keeps the old behavior, since the default base is the common case.
+```
+
+=== Good ===
+```markdown
+## Description
+
+`sm land` always pulled the primary branch after merging a PR, even when the PR merged somewhere else. Landing a PR based on a long-lived branch pulled unrelated commits into main and then reported "primary checkout caught up", although main did not have the landed work.
+
+It now checks which branch the PR merged into, and skips the pull with a reason when that is not the primary branch.
+```
