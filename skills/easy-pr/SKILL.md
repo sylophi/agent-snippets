@@ -17,6 +17,8 @@ Do NOT add any of the following to the PR body:
 - Generated-by lines
 - Any other sections beyond the summary
 
+If you have any images of the final result, you may add them to the PR. Do not add too many.
+
 ## Title Examples
 
 === Bad ===
