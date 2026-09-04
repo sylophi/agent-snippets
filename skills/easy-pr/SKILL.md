@@ -82,3 +82,21 @@ Adding a project through the app now selects that project's primary checkout ins
 
 It now checks which branch the PR merged into, and skips the pull with a reason when that is not the primary branch.
 ```
+
+=== Bad ===
+```markdown
+## Description
+
+`catchUpPrimary` returned early with `skipped primary catch-up: PR merged into v2, not the primary branch main` whenever `pr.BaseRefName != pt.localPrimary`, so the `v2` worktree was never pulled and an agent ran `git pull --ff-only origin v2` by hand, which fast-forwarded `main` in the primary checkout because `--ff-only` only forbids merge commits.
+
+`catchUpPrimary` is replaced by `catchUpBase`, which resolves `cmp.Or(prBase, pt.localPrimary)`, finds the checkout via the new `checkoutOn` helper in `context.go`, and calls `ffPull(path, pt.remote, base)`. `ffPull` now reads `git symbolic-ref --short HEAD` and returns an error when it is not `base`. `primaryTarget` gains a `remote` field, the JSON document replaces `primaryCaughtUp` with a `caughtUp` object and `catchUpSkipped`, the `--help` text is updated, and `TestCatchUpBasePullsTheBaseBranchCheckout` covers the v2 pull, the refused pull on main, the unchecked-out base, and the empty-base fallback.
+```
+
+=== Good ===
+```markdown
+## Description
+
+`sm land` skipped its catch-up when a PR merged into a branch other than the primary one. That left the base branch's worktree stale and invited a by-hand fast-forward, which once moved main onto v2 in the primary checkout.
+
+It now pulls whichever checkout has the PR's base branch out, and the pull refuses unless that checkout really is on the branch being advanced.
+```
