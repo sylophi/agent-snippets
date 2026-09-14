@@ -18,6 +18,7 @@ Do NOT add any of the following to the PR body:
 - Any other sections beyond the summary
 
 If you have any images of the final result, you may add them to the PR. Do not add too many.
+Upload them directly to GitHub, do not upload dropcube files. (https://docs.github.com/api/article/body?pathname=/en/github-cli/github-cli/attaching-files-with-github-cli)
 
 ## Title Examples
 
