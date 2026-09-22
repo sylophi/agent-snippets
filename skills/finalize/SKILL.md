@@ -4,3 +4,5 @@ description: Review the branch and make the PR. Runs /simplify, /code-review, /f
 ---
 
 Do /simplify, then /code-review, then /fast-deslop, then /easy-pr
+
+If your cwd is not the worktree, pass the branch to /code-review, or the review may run in the wrong place.
