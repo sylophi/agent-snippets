@@ -10,6 +10,8 @@ When done, provide the user with proof (images, diagrams, whatever you feel is a
 
 Rename the branches with `/sm-rename-branch` as soon as you can. The branch names should be prefixed `exp/`.
 
-If the user did not specify the number of worktrees, ask.
+If the user did not specify the number of worktrees, choose as many as you want.
+
+Do not ask the user what they want to see. The point is to try out different things and see what works.
 
 Note that there may already be existing experiments (branches/worktrees prefixed with `exp/`). Ensure that your experiments do not overlap conceptually.
