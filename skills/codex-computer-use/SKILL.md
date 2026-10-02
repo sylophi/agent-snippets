@@ -1,6 +1,8 @@
 ---
 name: codex-computer-use
 description: Delegate browser and desktop actions to Codex when Claude Code needs computer-use tools.
+metadata:
+  lichen-harnesses: claude
 ---
 
 Run a computer-use task:

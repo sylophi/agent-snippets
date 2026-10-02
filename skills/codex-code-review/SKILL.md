@@ -1,6 +1,8 @@
 ---
 name: codex-code-review
 description: Review a branch with the Codex CLI when asked for an independent code review.
+metadata:
+  lichen-harnesses: claude
 ---
 
 Choose the review base from the branch's PR target or parent branch. Do not assume `main`.
