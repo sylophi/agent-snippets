@@ -1,7 +1,6 @@
 ---
 name: repo-settings
-description: Apply preferred GitHub repo settings.
-disable-model-invocation: true
+description: Apply preferred GitHub repo settings. Use when creating a GitHub repo or when asked to update an existing repo's settings.
 ---
 
 Use these settings when creating a repo or when asked to update an existing repo:
