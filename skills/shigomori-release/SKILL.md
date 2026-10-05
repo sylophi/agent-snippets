@@ -52,7 +52,7 @@ Group by what the user experiences, not by PR. One PR can become several section
 ## Layout
 
 ```markdown
-This release adds X, lets you Y, and Z.
+A line or two on what this release brings.
 
 **Short title from the user's side** ([#123](https://github.com/sylophi/shigoto-no-mori/pull/123))
 One or two sentences.
@@ -76,7 +76,7 @@ One or two sentences.
 **Full Changelog**: https://github.com/sylophi/shigoto-no-mori/compare/vA.B.C...vX.Y.Z
 ```
 
-- The opening line is for minor releases. It names the top two or three sections in the same order. Patches start straight with the first section.
+- A minor release opens with a line or two about the release as a whole. Patches start straight with the first section.
 - Titles are short and say what changed for the user ("Sort a project's worktrees", "Hidden worktrees fade"), not the PR title ("Add per-project worktree sort").
 - Link every PR. A section built from two PRs links both.
 - Reuse the PR's images and videos, picking the ones that show the change best. Turn `![alt](url)` into `<img alt="..." src="..." width="640">`. Around 480 suits a small piece of UI, and around 400 suits a before/after table. A video is its bare URL on its own line.

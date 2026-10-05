@@ -307,7 +307,7 @@ Changes the user asked for on drafts:
 - **Cut how-to filler.** The palette note first ended with "Pick one of each in Appearance from a row of swatches. Your picks stay put even while Doubutsu is off." The user said it wasn't needed. The screenshot already shows the picker.
 - **No made-up terms.** "⌘K is now a jump box" became "Do more from ⌘K".
 - **Split bundled polish.** "A round of Doubutsu polish" became separate sections: accent colors, toasts, village news cards, popups without lines, and the leaf wallpaper.
-- **Order by what users notice.** Two new palettes and a mirror fix went ahead of the in-app changelog. A new dark mode went first, ahead of villager faces. The opening line follows the new order.
+- **Order by what users notice.** Two new palettes and a mirror fix went ahead of the in-app changelog. A new dark mode went first, ahead of villager faces.
 - **Give noticeable fixes room.** Three smaller fixes that users would see every day (a stuck mirror, faded hidden worktrees, the device filter moving) became their own sections.
 - **Cut the expected and the unimportant.** A v2.20.0 draft said the diff wrap button "works in both layouts and stays on across diffs and restarts", that a link "opens the app first if it isn't running", and that grouping by owner changes nothing "if all your projects have the same owner". None of it was needed. It also described the face that pops in when village news grows, which the video already shows.
 
