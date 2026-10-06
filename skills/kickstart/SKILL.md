@@ -6,4 +6,4 @@ disable-model-invocation: true
 
 Run /remote-access and /sm-new-worktree.
 
-If you can edit the thread title, keep the worktree title and the thread title in sync. If the titles conflict, choose whichever is simpler and reflects the current state of the thread better.
+If you are on T3 Code, keep the worktree title and the thread title in sync. If the thread title is good enough, use it. Otherwise create your own.
