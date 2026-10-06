@@ -5,6 +5,7 @@ metadata:
   lichen-harnesses: claude
 ---
 
+Test for edge cases, until you are confident.
 Do /simplify, then /code-review, then /fast-deslop, then /easy-pr
 
 If your cwd is not the worktree, pass the branch to /code-review, or the review may run in the wrong place.
