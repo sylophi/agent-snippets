@@ -1,6 +1,6 @@
 ---
 name: finalize
-description: Generalized instructions for creating a PR. Can be used when the work on a branch is done and ready to be cleaned up and shipped.
+description: My standard workflow for creating a PR. Offer to use it when the work on a branch is done, ready to be cleaned up and shipped.
 metadata:
   lichen-harnesses: claude
 ---
