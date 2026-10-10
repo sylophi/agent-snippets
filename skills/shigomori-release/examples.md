@@ -309,6 +309,7 @@ Changes the user asked for on drafts:
 - **Split bundled polish.** "A round of Doubutsu polish" became separate sections: accent colors, toasts, village news cards, popups without lines, and the leaf wallpaper.
 - **Order by what users notice.** Two new palettes and a mirror fix went ahead of the in-app changelog. A new dark mode went first, ahead of villager faces.
 - **Give noticeable fixes room.** Three smaller fixes that users would see every day (a stuck mirror, faded hidden worktrees, the device filter moving) became their own sections.
+- **Opening line isn't a list.** A v2.34.0 draft opened with "This release reworks committing on the Git page: every change starts ticked, the last commit takes more changes in one click, and undoing a commit keeps its message." The sections already say that. It became "Committing on the Git page now works much more like GitHub Desktop, and the rest of the page gets a little quieter and tidier."
 - **Cut the expected and the unimportant.** A v2.20.0 draft said the diff wrap button "works in both layouts and stays on across diffs and restarts", that a link "opens the app first if it isn't running", and that grouping by owner changes nothing "if all your projects have the same owner". None of it was needed. It also described the face that pops in when village news grows, which the video already shows.
 
 ## A whole release
@@ -316,7 +317,7 @@ Changes the user asked for on drafts:
 v2.18.0, a minor release:
 
 ```markdown
-This release fills out the new one-project sidebar: richer worktree rows, a sort menu, a header that stays put, and smooth slides between views. ⌘K can also find any project now.
+The new one-project sidebar gets a lot more useful, and ⌘K can now find any project.
 
 **Richer worktree rows** ([#453](https://github.com/sylophi/shigoto-no-mori/pull/453))
 Inside a project, worktrees now show the same rows as the inbox: the branch with all its status pills and PR number, over the worktree's name, device and villager face.
