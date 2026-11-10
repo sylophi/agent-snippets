@@ -1,29 +1,30 @@
 ---
 name: stitch-images
-description: Use when handing the user a group of images that belong together so they get a single image.
+description: Use when several images you're handing the user would read better as one combined image.
 ---
 
-# stitch-images: many images, one sheet
+# stitch-images
 
-Images that are read together belong on one sheet. Build it with `montage`.
-`-tile 2x` sets two columns, `-tile 1x` stacks, `-tile x1` makes a single row.
+Combine images when seeing them together helps the user compare or follow
+them. Send them separately when each needs its own full view.
+
+Choose the layout, crop, captions, annotations and styling to suit the
+content. Look at the result before sending it.
+
+## If using montage
+
+`magick montage` handles most grids, rows and stacks:
 
 ```sh
-magick montage -font /System/Library/Fonts/Helvetica.ttc \
-  -background '#1a1a1a' -fill white -pointsize 26 \
+magick montage -background '#1a1a1a' -fill white -pointsize 26 \
   -gravity north -tile 2x -geometry +14+14 \
-  -label 'Before: sidebar collapsed' before.png \
-  -label 'After: sidebar pinned'     after.png \
+  -label 'First caption' one.png \
+  -label 'Second caption' two.png \
   out.png
 ```
 
-Look at the finished sheet before sending it. Layout mistakes are obvious on
-sight and invisible in the command.
-
-## Notes
-
-- `-font` is required on every call, even one drawing no visible text, or the default filename labels fail with ``unable to read font `' ``.
-- `-geometry +14+14` sets tile padding and keeps images at full size. Without it you get 120x120 thumbnails.
-- Each `-label` captions the file after it. `-title` adds a heading over the sheet.
-- `-gravity north` aligns tiles at the top. Without it each one centers in a cell sized to the largest, so captures of differing height drift out of line.
-- Keep tiles at native size. The user can zoom, so downscaling only throws detail away. If a set genuinely needs shrinking, fit on width alone, as in `-geometry 620x+14+14`. A `620x620` fit builds a square cell and strands the caption far below its image.
+- Without `-geometry`, tiles shrink to thumbnails. `+14+14` only adds padding and keeps native size. To shrink, fit on width alone (`620x+14+14`), because `620x620` strands captions.
+- Without `-gravity north`, shorter tiles center vertically in their row.
+- A shorter tile after a taller one in a row gets its caption at the bottom of the row. Bake captions in first:
+  `magick -background '#1a1a1a' -fill white -pointsize 26 -gravity center \( tall.png label:'Tall' -append \) \( short.png label:'Short' -append \) miff:- | magick montage - -background '#1a1a1a' -gravity north -tile 2x -geometry +14+14 out.png`
+- On ``unable to read font``, pass `-font` with a name from `magick -list font`.
